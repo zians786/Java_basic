@@ -3,23 +3,23 @@
 import java.util.*;
 
 class Harmonic{
-	public static void main(String ar[])
+	public static void main(String args[])
 	{
-		Scanner sc=new Scanner(System.in);
+		Scanner scanner=new Scanner(System.in);
 		System.out.println("Enter Number-->");
-		int n=sc.nextInt();
+		int number=scanner.nextInt();
 		float total=0;
-		float f=0;
-		for(float i=1;i<=n;i++)
-	{	f=(1/i);
-		total=total+f;
-		
-		
+		while(number==0)
+		{
+			System.out.println("Please Enter value more than " +number);
+			number=scanner.nextInt();
 		}
-	System.out.println(total);
+		for(float i=1;i<=number;i++) 
+		{	
+			total=total+(1/i);
+		}
+	System.out.println("Value of Harmonic Series is --> "+total);
 	
 	
 	}
-	
-	
 }

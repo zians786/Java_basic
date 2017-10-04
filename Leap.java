@@ -3,23 +3,40 @@ import java.util.*;
 class Leap{
 	public static void main(String ar[])
 	{
-	Scanner sc=new Scanner(System.in);
-	String n;
+	Scanner scanner=new Scanner(System.in);
+	String year_value;
 	System.out.println("Enter Year: ");
-	n=sc.nextLine();
+	year_value=scanner.nextLine();
 	
-	if(n.length()==4){
-		int i=Integer.parseInt(n);
-	if(i%4==0)
-	{	System.out.println(n+", It's a Leap Year..");
-	}
+	if(year_value.length()==4)
+{
+		int year=Integer.parseInt(year_value);
+	if(year%4==0)
+	{	
+		if(year%100==0)
+		{
+			if(year%400==0)
+			{
+				System.out.println(year+", It's a Leap Year..");
+			}
+			else
+			{
+				System.out.println(year+" --> It's not a Leap Year..");
+			}
+		}
+		else
+		{
+			System.out.println(year+", It's a Leap Year..");
+		}
+	}	
 	else
-	{	System.out.println(n+" --> It's not a Leap Year..");
+	{
+		System.out.println(year+" --> It's not a Leap Year..");
 	}
 }
 else
-{System.out.println("Input year value is not correct..");}
-
-
+{
+	System.out.println("Input year value is not correct..");
+}
 }
 }
